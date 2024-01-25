@@ -14,19 +14,7 @@ async function bootstrap() {
   });
 
   app.use(helmet());
-  app.use('/swagger-ui', express.static('path/to/swagger-ui', {
-    setHeaders: (res, filePath) => {
-      const ext = path.extname(filePath);
-      switch (ext) {
-        case '.css':
-          res.type('text/css');
-          break;
-        case '.js':
-          res.type('application/javascript');
-          break;
-      }
-    },
-  }));
+  app.use(express.static(__dirname));
 
   setupSwagger(app);
   await app.listen(process.env.PORT);
