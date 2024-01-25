@@ -24,26 +24,50 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+Welcome to the Inncol UI Developer Interview API! This API is designed to showcase various endpoints that UI developers may interact with during their work at Inncol. It provides a set of features and data representations commonly used in UI development projects.
+
+## Prerequisites
+
+Before you begin, make sure you have the following tools installed:
+
+- [NVM (Node Version Manager)](https://github.com/nvm-sh/nvm)
+- [Git](https://git-scm.com/)
 
 ## Installation
 
-```bash
-$ npm install
-```
+1. **Install NVM:**
+   - Follow the instructions on the [official NVM GitHub repository](https://github.com/nvm-sh/nvm) to install Node Version Manager.
+   - After installation, restart your terminal or run `source ~/.bashrc` (or `source ~/.zshrc` if you're using Zsh).
 
-## Running the app
+2. **Install Node.js:**
+   - Run the following command to install the recommended Node.js version specified in your project:
+     ```bash
+     $ nvm install --lts
+     ```
 
-```bash
-# development
-$ npm run start
+3. **Install Git:**
+   - Follow the instructions on the [official Git website](https://git-scm.com/) to install Git.
 
-# watch mode
-$ npm run start:dev
+4. **Clone the Repository:**
+   - Clone this repository to your local machine using Git:
+     ```bash
+     $ git clone https://github.com/INNCOL/interview-api.git
+     ```
 
-# production mode
-$ npm run start:prod
-```
+5. **Navigate to the Project Directory:**
+   - Change into the project directory:
+     ```bash
+     $ cd interview-api
+     ```
+
+6. **Install Dependencies:**
+   - Run the following command to install project dependencies:
+     ```bash
+     $ npm install
+     ```
+
+7. **Start the Application:**
+   - Start the application using the appropriate command (e.g., `npm run start:dev`).
 
 ## Test
 
@@ -62,12 +86,3 @@ $ npm run test:cov
 
 Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
 
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
