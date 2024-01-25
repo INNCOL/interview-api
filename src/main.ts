@@ -5,7 +5,7 @@ import { setupSwagger } from './swagger/swagger';
 import helmet from 'helmet';
 
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule, { cors: true });
+  const app = await NestFactory.create(AppModule);
   app.enableVersioning({
     type: VersioningType.URI,
     prefix: 'v'
