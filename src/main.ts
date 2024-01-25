@@ -13,6 +13,6 @@ async function bootstrap() {
 
   app.use(helmet());
   setupSwagger(app);
-  await app.listen(3000);
+  await app.listen(process.env.PORT);
 }
 bootstrap();
