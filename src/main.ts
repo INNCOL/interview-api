@@ -3,6 +3,8 @@ import { VersioningType } from '@nestjs/common';
 import { AppModule } from './app.module';
 import { setupSwagger } from './swagger/swagger';
 import helmet from 'helmet';
+import { get } from 'http';
+import { createWriteStream } from 'fs';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule, { cors: true });
@@ -15,5 +17,9 @@ async function bootstrap() {
 
   setupSwagger(app);
   await app.listen(process.env.PORT);
+  const serverUrl = await app.getUrl();
+
+  console.log(`Server running at : ${serverUrl}`)
 }
+
 bootstrap();
