@@ -25,9 +25,7 @@
                 "GET"
             ],
             "headers": {
-                "Cache-Control": "public, max-age=0, must-revalidate",
-                "Content-Type": "text/javascript",
-                "Content-Security-Policy": "script-src 'self' 'unsafe-eval';"
+                "Cache-Control": "public, max-age=0, must-revalidate"
             }
         },
         {
@@ -48,6 +46,16 @@
                 "DELETE",
                 "PATCH"
             ]
+        }
+    ],
+    "rewrites": [
+        {
+            "source": "/swagger",
+            "destination": "/swagger/index.html"
+        },
+        {
+            "source": "/swagger/(.*)",
+            "destination": "/swagger/$1"
         }
     ]
 }
