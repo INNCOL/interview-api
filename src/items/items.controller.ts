@@ -1,5 +1,5 @@
 import { Controller, Get } from "@nestjs/common";
-import { ApiBearerAuth, ApiTags } from "@nestjs/swagger";
+import { ApiBearerAuth, ApiResponse, ApiTags } from "@nestjs/swagger";
 
 type Item = {
     title: string;
@@ -31,6 +31,7 @@ export class ItemsController {
     }
 
     @Get('items')
+    @ApiResponse({ status: 403, description: 'Forbidden.' })
     findAll(): Item[] {
         return Array.from({ length: 10 }, (_, index) => ({
             title: `Inncol ${index + 1}`,
